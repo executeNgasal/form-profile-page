@@ -1,14 +1,14 @@
-const image_input = document.querySelector('#image_input');
-
+const imageInput = document.getElementById('image-input');
 var uploaded_image = "";
 
+imageInput.addEventListener("change", function() {
+    console.log(imageInput.value);
 
-image_input.addEventListener('change', function() {
-    const reader = new FileReader();
-    reader.addEventListener('load', () => { 
-        uploaded_image = reader.result;
-        document.getElementById('display-image').style.backgroundImage = `url(${uploaded_image})`
-    });
+//     const reader = new FileReader();
+//     reader.addEventListener('load', () => { 
+//         uploaded_image = reader.result;
+//         document.getElementById('display-image').style.backgroundImage = `url(${uploaded_image})`
+//     });
 
-    reader.readAsDataURL(this.files[0]);
+//     reader.readAsDataURL(this.files[0]);
 });
