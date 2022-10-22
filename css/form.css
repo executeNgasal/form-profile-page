@@ -1,7 +1,6 @@
 @import url("/css/reset.css");
 @import url("/css/style.css");
 
-
 :root {
     --txt-color-darker: #2F3765;
     --txt-color-dark: #4F5C88;
@@ -12,13 +11,13 @@
 
     --font-raleway: "Raleway", sans-serif;
 
-    --font-title: 2rem;
+    --font-title: 32px;
     --font-header: ;
-    --font-subheader: 1.1em;
+    --font-subheader: 16px;
     --font-paragraph: 1rem;
-    --font-xl: 1.5rem;
-    --font-lg: 1.15rem;
-    --font-med: .75em;
+    --font-xl: 24px;
+    --font-lg: ;
+    --font-med: 13px;
     --font-def: ;
     --font-sm: ;
     --font-xs: ;
@@ -69,11 +68,16 @@ button {
 
 input:not(input[type="file"]),
 textarea {
-    border: none;
+    border: 1px solid var(--light-grey);
     outline: none;
     background-color: var(--light-grey);
     padding: 15px 20px;
     border-radius: 7px;
+    transition: 200ms ease-in;
+}
+
+#age { 
+    appearance: none;
 }
 
 input::placeholder,
@@ -84,6 +88,9 @@ textarea::placeholder {
     font-size: calc(var(--font-med) + 2px);
 
 }
+
+input:not(input[type="file"]):invalid,
+textarea:invalid {}
 
 button {
     border: none;
@@ -243,7 +250,7 @@ main form .grid {
 } */
 
 /* ends */
-    
+
 .form-content input[type="email"] {
     text-transform: none;
 }
@@ -257,6 +264,8 @@ main form .grid {
 .form-content .item-8 {
     border: 1px solid var(--darker-grey);
     border-radius: 7px;
+    font-size: calc(var(--font-med) + 2px);
+    text-transform: uppercase;
 
     display: flex;
     align-items: center;
@@ -264,27 +273,6 @@ main form .grid {
     position: relative;
 }
 
-.item-8::before {
-    content: 'Insert Image';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--light-grey);
-    border-radius: 7px;
-    padding: 15px 20px;
-    font-size: var(--font-med);
-    /* font-size: calc(var(--font-med) + 2px); */
-    text-transform: uppercase;
-    color: var(--txt-color-dark);
-    letter-spacing: 1px;
-
-}
-
-.form-content .item-8 input {
-    text-align: center;
-    /* opacity: 0; */
-}
 
 .form-content .item-9 {
     font-size: var(--font-med);
@@ -301,4 +289,3 @@ main form .grid {
     display: none;
     scroll-behavior: smooth;
 }
-
