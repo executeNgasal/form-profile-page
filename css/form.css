@@ -85,7 +85,7 @@ textarea::placeholder {
     letter-spacing: 1px;
     color: var(--txt-color-dark);
     text-transform: uppercase;
-    font-size: calc(var(--font-med) + 2px);
+    font-size: calc(var(--font-med) );
 
 }
 
@@ -250,6 +250,7 @@ main form .grid {
 } */
 
 /* ends */
+
 
 .form-content input[type="email"] {
     text-transform: none;
