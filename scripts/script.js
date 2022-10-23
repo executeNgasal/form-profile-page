@@ -1,18 +1,4 @@
-/*const imageInput = document.getElementById('image-input');
-var uploaded_image = "";
 
-imageInput.addEventListener("change", function () {
-    // console.log(imageInput.value);
-    
-    const reader = new FileReader();
-    reader.addEventListener('load', () => {
-        uploaded_image = reader.result;
-        document.getElementById('display-image').style.backgroundImage = `url(${uploaded_image})`
-    });
-    
-    reader.readAsDataURL(this.files[0]);
-});
-*/
 const full_name = document.getElementById("full_name");
 const nick_name = document.getElementById("nick_name");
 const age = document.getElementById("age");
@@ -42,6 +28,14 @@ const handleInputNumber = e => {
 };
 
 const handleSubmit = e => {
+
+    const fullname = full_name.value;
+    const nickname = nick_name.value;
+    localStorage.setItem('FULLNAME', fullname);
+    localStorage.setItem('NICKNAME', nickname);
+
+
+
     let condition = validate() == true;
     if (condition) {
         /**
@@ -65,6 +59,8 @@ const handleSubmit = e => {
 
     } else
         e.preventDefault();
+
+    return;
 };
 
 // handles the submit event
@@ -178,6 +174,4 @@ const isValidEmail = email => {
 
     return false;
 }
-
-
 
