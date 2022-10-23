@@ -11,6 +11,15 @@
   <link rel="stylesheet" href="/css/base-styles.css" />
   <title>Your Profile</title>
 
+  <?php
+  $fullname = $_POST['fullname'];
+  $nickname = $_POST['nickname'];
+  $email = $_POST['email'];
+  $age = $_POST['age'];
+  $role = $_POST['role'];
+  $profile = $_POST['profile'];
+  $description = $_POST['description'];
+  ?>
   <style>
     /* Fonts (Open Sans, Poppins, Raleway*/
     @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&family=Poppins:ital,wght@0,100;0,200;0,500;0,600;0,700;1,400&family=Raleway:wght@400;600;700&display=swap");
@@ -281,12 +290,12 @@
         </section>
         <section class="profile-name flex">
           <p class="greet-name">hello</p>
-          <p class="greet-name">i'm jane doe</p>
+          <p class="greet-name">i'm <?php echo $nickname ?></p>
         </section>
         <section class="profile-desc">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas aut
-            quo similique repellendus corporis
+            
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, consequatur. Dolorem, assumenda sit. Deleniti, quaerat? Ratione et eaque omnis ipsam.
           </p>
         </section>
         <section class="profile-socmed flex">
@@ -302,15 +311,7 @@
         <h4>about me</h4>
         <section class="about-text flex">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi,
-            molestias dolore vel ad itaque corrupti ipsam nobis voluptates
-            obcaecati dignissimos recusandae perspiciatis rerum, id magni
-            voluptate corporis earum quae aut nemo deleniti?
-          </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut
-            nostrum ab numquam, rerum omnis provident placeat beatae possimus
-            totam quod.
+            <?php echo $description?>
           </p>
         </section>
         <span class="cta-btn flex"><a href="#">contact me</a></span>
@@ -321,15 +322,15 @@
         <h4>details</h4>
         <section class="details-content details-name">
           <p class="bold">name:</p>
-          <p>Jane Doe</p>
+          <p><?php echo $fullname?></p>
         </section>
         <section class="details-content details-age flex">
           <p class="bold">age:</p>
-          <p>25 years</p>
+          <p><?php echo $age?> years</p>
         </section>
         <section class="details-content details-location flex">
           <p class="bold">location:</p>
-          <p>Las Vegas, United States</p>
+          <p>Malang, Indonesia</p>
         </section>
         <section class="details-socmed flex">
           <a href="#"><img src="/assets/img/icons/icons-black/fb.svg" alt="" /></a>
