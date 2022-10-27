@@ -42,6 +42,14 @@ const handleInputNumber = e => {
 };
 
 const handleSubmit = e => {
+
+    const fullname = full_name.value;
+    const nickname = nick_name.value;
+    localStorage.setItem('FULLNAME', fullname);
+    localStorage.setItem('NICKNAME', nickname);
+
+
+
     let condition = validate() == true;
     if (condition) {
         /**
@@ -65,6 +73,8 @@ const handleSubmit = e => {
 
     } else
         e.preventDefault();
+
+    return;
 };
 
 // handles the submit event
@@ -178,6 +188,4 @@ const isValidEmail = email => {
 
     return false;
 }
-
-
 

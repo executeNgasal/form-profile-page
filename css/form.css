@@ -1,57 +1,9 @@
 @import url("/css/reset.css");
+@import url("base-styles.css");
 @import url("/css/style.css");
 
-:root {
-    --txt-color-darker: #2F3765;
-    --txt-color-dark: #4F5C88;
-    --txt-color-light: #808BB1;
-    --accent-color: #F76CAD;
-    --light-grey: #F8F8F8;
-    --darker-grey: #DFDFDF;
-
-    --font-raleway: "Raleway", sans-serif;
-
-    --font-title: 32px;
-    --font-header: ;
-    --font-subheader: 16px;
-    --font-paragraph: 1rem;
-    --font-xl: 24px;
-    --font-lg: ;
-    --font-med: 13px;
-    --font-def: ;
-    --font-sm: ;
-    --font-xs: ;
-}
-
-*,
-*::before,
-*::after {
-    font-family: 'Raleway', sans-serif;
-}
-
-body {
-    min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 /* presets starts */
-h1,
-h2,
-h3,
-h4,
-h5 {
-    color: var(--txt-color-darker);
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-p {
-    text-transform: uppercase;
-    color: var(--txt-color-dark);
-}
 
 .sub-header {
     font-size: var(--font-subheader);
