@@ -59,10 +59,13 @@ body {
 
 body {
     min-height: 100vh;
+    line-height: 1.25rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 100px;
 }
 
 h1,
@@ -71,11 +74,30 @@ h3,
 h4,
 h5 {
     color: var(--txt-color-darker);
-    font-weight: 600;
+    font-weight: var(--font-bold);
     text-transform: uppercase;
 }
 
 p {
-    text-transform: uppercase;
     color: var(--txt-color-dark);
+}
+
+a { 
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+    font-size: var(--font-med);
+    letter-spacing: 1px;
+}
+
+main {
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, .1);
+    width: 100vw;
+    max-width: 1200px;
+}
+
+.bold { 
+    font-weight: var(--font-bold);
 }
