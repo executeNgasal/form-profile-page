@@ -1,0 +1,103 @@
+/* Fonts (Open Sans, Poppins, Raleway*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&family=Poppins:ital,wght@0,100;0,200;0,500;0,600;0,700;1,400&family=Raleway:wght@400;600;700&display=swap");
+
+/* Base Styles */
+:root {
+    /* Color Palette */
+    --txt-white: #fff;
+    --txt-color-darker: #2f3765;
+    --txt-color-dark: #4f5c88;
+    --txt-color-light: #808bb1;
+    --accent-color: #f76cad;
+    --light-grey: #f8f8f8;
+    --darker-grey: #dfdfdf;
+    --txt-color-darker: #2f3765;
+    --txt-color-dark: #4f5c88;
+    --txt-color-light: #808bb1;
+    --accent-color: #f76cad;
+    --light-grey: #f8f8f8;
+    --darker-grey: #dfdfdf;
+    --icon-black: #000;
+    --snow-drift: #e7e7de;
+    --profile-box: #00587a;
+
+    /* Font Styles */
+    --font-open-sans: "Open Sans", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
+    --font-raleway: "Raleway", sans-serif;
+    --font-title: 32px;
+    --font-subheader: 16px;
+    --font-paragraph: 1rem;
+    --font-xl: 24px;
+    --font-med: 12px;
+    /* --font-lg: 32px;
+  --font-def: 16px;
+  --font-sm: 14px;
+  --font-xs: 12px; */
+    --font-extra-light: 100;
+    --font-light: 200;
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    --font-extra-bold: 800;
+}
+
+*,
+*::before,
+*::after {
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.25rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--txt-color-darker);
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+}
+
+p {
+    color: var(--txt-color-dark);
+}
+
+a { 
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+    font-size: var(--font-med);
+    letter-spacing: 1px;
+}
+
+main {
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, .1);
+    width: 100vw;
+    max-width: 1200px;
+}
+
+.bold { 
+    font-weight: var(--font-bold);
+}

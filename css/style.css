@@ -1,3 +1,182 @@
-body {
-   font-family: 'Poppins', sans-serif;
+p {
+   text-transform: none;
 }
+
+.cta-btn {
+   border: 1px solid var(--txt-color-darker);
+   border-radius: 5px;
+   padding: 10px;
+   transition: 100ms ease;
+}
+
+.btn-light {
+   background-color: var(--txt-color-darker);
+   color: var(--txt-white);
+}
+
+.btn-light:hover {
+   background-color: var(--txt-white);
+   color: var(--txt-color-darker);
+}
+
+.btn-dark {
+   background-color: var(--txt-white);
+   color: var(--txt-color-darker);
+}
+
+.btn-dark:hover {
+   background-color: var(--txt-color-darker);
+   color: var(--txt-white);
+}
+
+.flex {
+   display: flex;
+}
+
+.grid-container {
+   display: grid;
+   grid-template-columns: minmax(300px, 1fr) 1.5fr 1fr;
+   /* grid-area: "title title title"
+      "card about details"
+      "card about details"
+      "card about details"; */
+   gap: 40px;
+   justify-items: center;
+   /* align-items: center; */
+}
+
+#output {}
+
+.grid-item-1 {
+   /* grid-area: title; */
+   grid-column: 1/ span 4;
+}
+
+.grid-item-2 {
+   /* grid-area: card; */
+   grid-column: 1 / 2;
+}
+
+.grid-item-3 {
+   /* grid-area: about; */
+   grid-column: 2 / 3;
+}
+
+.grid-item-4 {
+   /* grid-area: details; */
+   grid-column: 3/ 4;
+}
+
+#output header {
+   text-align: center;
+   /* height: 200px; */
+   padding: 20px;
+
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+}
+
+#output header h1 {
+   font-size: var(--font-title);
+}
+
+#output .grid-item-2 {}
+
+#output .grid-item-2 .profile {
+   position: relative;
+
+   background-color: var(--darker-grey);
+   padding: 100px 40px 40px;
+   text-align: justify;
+
+   flex-direction: column;
+   align-items: center;
+   gap: 2rem;
+}
+
+.grid-item-2 .profile-img {
+   position: absolute;
+   top: 0%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+
+   width: 120px;
+   height: 120px;
+   border-radius: 50%;
+   background: url('../assets/img/img-profile-test.jpg') no-repeat;
+   background-size: cover;
+}
+
+.grid-item-2 .profile-name .greet-name {
+   font-size: var(--font-title);
+   text-align: start;
+}
+#nickname-in {
+   line-height: 1em;
+   text-align: center;
+}
+
+.grid-item-2 .profile-socmed {
+   gap: 10px;
+}
+
+.grid-item-2 .profile-socmed a img {
+   /* background-color:red; */
+   width: 24px;
+   height: 24px;
+}
+
+/* 3rd grid item */
+.grid-item-3 article.about {
+   position: relative;
+   
+   flex-direction: column;
+   gap: 20px;
+}
+
+
+/* .grid-item-3 article.about h4 {
+   font-weight: var(--font-semi-bold);
+} */
+.grid-item-3 .about .about-text {
+   text-align: justify;
+
+}
+
+.grid-item-3 .about .cta-btn {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+
+   align-self: end;
+
+}
+
+/* ends */
+
+
+/* 4th grid item */
+
+.grid-item-4 article {
+   position: relative;
+
+   flex-direction: column;
+   gap: 10px;
+}
+
+.grid-item-4 .details .cta-btn {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+
+   align-self: flex-end;
+
+}
+
+.grid-item-4 .details .details-content p {
+   margin-bottom: 10px;
+}
+
+
+/* ends */

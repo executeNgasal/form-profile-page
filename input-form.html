@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/base-styles.css" />
+
+    <script src="/scripts/script.js" defer></script>
+
+    <title>Register</title>
+</head>
+
+
+<body>
+    <main class="form-container">
+        <form id="form" method="post">
+            <header class="form-header">
+                <h1>registration form</h1>
+                <p>please fill the form below correctly to enable us serve you better!</p>
+            </header>
+            <section class="form-content grid">
+                <header class="sub-header item-1">basic informations <span class="">*</span></header>
+                <header class="sub-header item-2">tell us about yourself <span class="">*</span></header>
+                <input class="item-3" type="text" id="full_name" placeholder="fullname" name="fullname" required>
+                <input class="item-4" type="text" id="nick_name" name="nickname" placeholder="nickname" required>
+                <input class="item-5" type="text" inputmode="numeric" id="age" name="age" placeholder="age" required>
+                <input class="item-6" type="text" id="role" name="role" placeholder="role" required>
+                <input class="item-7" type="email" id="email" name="email" placeholder="email">
+                <label class="input-image item-8" id="display-image">
+                    Insert Image
+                    <input style="display: none;" type="file" id="profile" name="profile" accept="image/png, image/jpg"
+                        id="image-input">
+                </label>
+                <textarea class="item-9" id="description" name="description"
+                    placeholder="describe yourself..."></textarea>
+                <button class="item-10" type="submit" id="submit-btn" class="btn btn-submit">submit</button>
+            </section>
+        </form>
+    </main>
+
+    <main id="output" class="grid-container" style="display: none;">
+        <header class="grid-item-1 header flex">
+            <h1>profile</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        </header>
+        <div class="grid-item-2 main-content flex">
+            <article class="flex profile">
+                <section class="profile-img">
+                    <!-- <img src="/assets/img/img-profile-test.jpg" alt="" /> -->
+                </section>
+                <section class="profile-name flex">
+                    <h1 class="greet-name" id="nickname-in">
+                        <!-- get data from user's input -->
+                    </h1>
+                </section>
+                <section class="profile-desc">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, consequatur. Dolorem, assumenda
+                        sit. Deleniti, quaerat? Ratione et eaque omnis ipsam.
+                    </p>
+                </section>
+                <section class="profile-socmed flex">
+                    <a href="#"><img src="/assets/img/icons/icons-snow-drift/fb.svg" /></a>
+                    <a href="#"><img src="/assets/img/icons/icons-snow-drift/t.svg" /></a>
+                    <a href="#"><img src="/assets/img/icons/icons-snow-drift/ig.svg" /></a>
+                    <a href="#"><img src="/assets/img/icons/icons-snow-drift/linkedin.svg" /></a>
+                </section>
+            </article>
+        </div>
+        <div class="grid-item-3 main-content flex">
+            <article class="flex about">
+                <h4>about me</h4>
+                <section class="about-text flex">
+                    <p id="desc-in">
+                        <!-- get data from user's input -->
+                        
+                    </p>
+                </section>
+                <span class="cta-btn btn-dark"><a href="#">portofolio</a></span>
+
+            </article>
+        </div>
+        <div class="grid-item-4 main-content flex">
+            <article class="flex details">
+                <h4>details</h4>
+                <section class="details-content details-name">
+                    <p class="bold">Name:</p>
+                    <p id="fullname-in">
+                        <!-- get data from user's input -->
+                    </p>
+                </section>
+                <section class="details-content details-age">
+                    <p class="bold">Age:</p>
+                    <p id="age-in">
+                        <!-- get data from user's input -->
+                    </p>
+                </section>
+                <section class="details-content details-location">
+                    <p class="bold">Location:</p>
+                    <p>Malang, Indonesia</p>
+                </section>
+                <!-- <section class="details-socmed flex">
+                    <a href="#"><img src="/assets/img/icons/icons-black/fb.svg" alt="" /></a>
+                    <a href="#"><img src="/assets/img/icons/icons-black/t.svg" alt="" /></a>
+                    <a href="#"><img src="/assets/img/icons/icons-black/ig.svg" alt="" /></a>
+                </section> -->
+                <span class="cta-btn btn-light"><a href="#">contact me</a></span>
+            </article>
+        </div>
+    </main>
+</body>
+
+</html>

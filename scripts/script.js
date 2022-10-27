@@ -9,14 +9,25 @@ const input_image = document.getElementById("profile");
 
 const submit = document.getElementById('submit-btn');
 let data = [];
+const formContainer = document.querySelector('.form-container');
+const outputContainer = document.querySelector('#output');
 
 function handleOutput(newData) {
-    const formContainer = document.querySelector('.form-container');
-    const h1Elem = document.querySelector('#output h1');
+
+    const nickname = document.querySelector('#nickname-in');
+    const fullname = document.querySelector('#fullname-in');
+    const age = document.querySelector('#age-in');
+    const desc = document.querySelector('#desc-in');
+
 
     formContainer.style.display = "none";
+    outputContainer.style.display = "grid";
 
-    h1Elem.innerHTML = newData[0]["fullname"];
+
+    fullname.innerHTML = newData[0]["fullname"];
+    nickname.innerHTML = "Hello I'M \n" + newData[0]["nickname"];
+    age.innerHTML = newData[0]["age"];
+    desc.innerHTML = newData[0]["description"];
 };
 
 const handleInputNumber = e => {
@@ -26,6 +37,27 @@ const handleInputNumber = e => {
         e.preventDefault();
     }
 };
+
+/** 
+ * promise
+ */
+
+let loadPopupPage = new Promise(function (resolve, reject) {
+
+    let request = new XMLHttpRequest();
+
+    request.open('GET', "#");
+    request.onload = function () {
+        setTimeout(() => {
+            if (request.status == 200)
+                resolve(request.response);
+            else
+                reject("Invalid Inputs");
+        }, 2000);
+    };
+    request.send();
+});
+
 
 const handleSubmit = e => {
 
@@ -52,10 +84,10 @@ const handleSubmit = e => {
                 "description": description.value,
             }
         );
-
         setTimeout(() => {
             handleOutput(data);
         }, 500);
+        e.preventDefault();
 
     } else
         e.preventDefault();
