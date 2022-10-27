@@ -61,18 +61,12 @@ button:focus {
 
 /* presets ends */
 
-main {
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, .1);
-}
 
 main form {
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    width: 80vw;
-    max-width: 1000px;
+    
 }
 
 
@@ -91,7 +85,7 @@ header.form-header h1 {
 }
 
 header.form-header p {
-    font-size: var(--font-med);
+    font-size: var(--font-lg);
 }
 
 header span {
