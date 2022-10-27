@@ -1,3 +1,4 @@
+
 const full_name = document.getElementById("full_name");
 const nick_name = document.getElementById("nick_name");
 const age = document.getElementById("age");
@@ -59,6 +60,14 @@ let loadPopupPage = new Promise(function (resolve, reject) {
 
 
 const handleSubmit = e => {
+
+    const fullname = full_name.value;
+    const nickname = nick_name.value;
+    localStorage.setItem('FULLNAME', fullname);
+    localStorage.setItem('NICKNAME', nickname);
+
+
+
     let condition = validate() == true;
     if (condition) {
         /**
